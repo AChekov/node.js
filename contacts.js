@@ -1,5 +1,17 @@
 // const fs = require("fs/promises");
-// const fs = require("fs").promises;
+const fs = require("fs").promises;
+const path = require("path");
+
+const filePath = path.join(__dirname, "contacts.json");
+
+console.log(filePath);
+
+const getAll = async () => {
+  const products = await fs.readFile(filePath);
+  return products;
+};
+
+module.exports = getAll;
 
 // const filepath = "./db/contacts.json";
 
@@ -17,7 +29,7 @@
 
 // fileOperation({ action: "read" });
 
-// fs.readFile("./db/contacts.json")
+// fs.readFile("db/contacts.json")
 //   .then((data) => console.log(data))
 //   .catch((error) => console.log(error));
 
