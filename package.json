@@ -22,5 +22,10 @@
   "homepage": "https://github.com/AChekov/node.js#readme",
   "devDependencies": {
     "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "commander": "^9.4.0",
+    "uuid": "^9.0.0",
+    "yargs": "^17.5.1"
   }
 }
