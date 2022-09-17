@@ -56,5 +56,7 @@ program
   .option("-p, --phone <type>", "user phone");
 
 program.parse(process.argv);
-const options = program.opts();
-invokeAction(options);
+const argv = program.opts();
+(async () => {
+  await invokeAction(argv);
+})();
